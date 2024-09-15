@@ -1,6 +1,37 @@
 // app/page.js
 "use client";
 import { Container, Navbar, Nav, NavDropdown, Row, Col, Card } from 'react-bootstrap';
+import Image from 'next/image';
+import Perfil from './assets/eu.png'; // Certifique-se de que o caminho para a imagem está correto
+
+const eu = {
+  nome: 'Alan Guerra',
+  title: 'Engenheiro de Software',
+  description: 'Com uma carreira em desenvolvimento de software iniciada em 2017, tenho ampla experiência em projetos web de grande escala que impactam milhões de usuários, utilizando tecnologias como .NET, JavaScript e TypeScript. Minha trajetória inclui contribuições significativas em projetos internacionais como voluntário, envolvendo o desenvolvimento de aplicações para o setor aeroportuário em Argentina, Moçambique e Estados Unidos.',
+}
+
+const menu = [
+  {
+    id: 'home',
+    name: 'Início',
+  },
+  {
+    id: 'development',
+    name: 'Desenvolvimento Web',
+  },
+  {
+    id: 'consulting',
+    name: 'Consultoria',
+  },
+  {
+    id: 'projects',
+    name: 'Projetos',
+  },
+  {
+    id: 'contact',
+    name: 'Contato',
+  },
+]
 
 export default function Home() {
   return (
@@ -24,10 +55,20 @@ export default function Home() {
         </Container>
       </Navbar>
       
-      <section id="home">
-        <Container className="mt-5">
-          <h1>Bem-vindo ao Meu Portfólio</h1>
-          <p>Este é um site de portfólio simples e profissional utilizando Next.js e Bootstrap 5.</p>
+      <section id="home" className="text-center py-5">
+        <Container>
+          <div className="d-flex justify-content-center mb-4">
+            <Image
+              src={Perfil}
+              alt="Minha Foto"
+              width={300}
+              height={300}
+              className="rounded-circle"
+            />
+          </div>
+          <h1 className="mt-4">Olá, eu sou {eu.nome}</h1>
+          <h2>{eu.title}</h2>
+          <p>{eu.description}</p>
         </Container>
       </section>
 
