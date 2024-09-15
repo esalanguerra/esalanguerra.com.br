@@ -11,26 +11,11 @@ const eu = {
 }
 
 const menu = [
-  {
-    id: 'home',
-    name: 'Início',
-  },
-  {
-    id: 'development',
-    name: 'Desenvolvimento Web',
-  },
-  {
-    id: 'consulting',
-    name: 'Consultoria',
-  },
-  {
-    id: 'projects',
-    name: 'Projetos',
-  },
-  {
-    id: 'contact',
-    name: 'Contato',
-  },
+  { id: 'home', name: 'Início' },
+  { id: 'development', name: 'Desenvolvimento' },
+  { id: 'consulting', name: 'Consultoria' },
+  { id: 'projects', name: 'Projetos' },
+  { id: 'contact', name: 'Contato' },
 ]
 
 export default function Home() {
@@ -42,19 +27,22 @@ export default function Home() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Início</Nav.Link>
-              <NavDropdown title="Serviços" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#web-design">Web Design</NavDropdown.Item>
-                <NavDropdown.Item href="#development">Desenvolvimento</NavDropdown.Item>
-                <NavDropdown.Item href="#consulting">Consultoria</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#projects">Projetos</Nav.Link>
-              <Nav.Link href="#contact">Contato</Nav.Link>
+              {menu.map((item, index) =>
+                item.name === 'Serviços' ? (
+                  <NavDropdown key={index} title={item.name} id="basic-nav-dropdown">
+                    {menu.filter(subItem => subItem.id !== 'home' && subItem.id !== 'projects' && subItem.id !== 'contact').map((subItem, subIndex) => (
+                      <NavDropdown.Item key={subIndex} href={`#${subItem.id}`}>{subItem.name}</NavDropdown.Item>
+                    ))}
+                  </NavDropdown>
+                ) : (
+                  <Nav.Link key={index} href={`#${item.id}`}>{item.name}</Nav.Link>
+                )
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      
+
       <section id="home" className="text-center py-5">
         <Container>
           <div className="d-flex justify-content-center mb-4">
@@ -72,16 +60,9 @@ export default function Home() {
         </Container>
       </section>
 
-      <section id="web-design" className="bg-light py-5">
-        <Container>
-          <h2>Serviços de Web Design</h2>
-          <p>Oferecemos soluções criativas e personalizadas para a criação e desenvolvimento de websites.</p>
-        </Container>
-      </section>
-
       <section id="development" className="py-5">
         <Container>
-          <h2>Desenvolvimento</h2>
+          <h2>Desenvolvimento Web</h2>
           <p>Desenvolvemos soluções tecnológicas robustas e escaláveis para atender às suas necessidades de negócios.</p>
         </Container>
       </section>
