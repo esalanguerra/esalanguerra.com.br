@@ -7,8 +7,6 @@ const ContactSection = () => {
       <Container>
         <h2>Contato</h2>
         <p>Entre em contato conosco através do formulário abaixo ou envie um e-mail para contato@exemplo.com.</p>
-        
-        {/* Adicionando ícones de redes sociais dinamicamente */}
         <Row className="text-center mt-4">
           <Col>
             {links.map((link) => (
