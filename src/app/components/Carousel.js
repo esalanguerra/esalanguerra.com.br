@@ -1,5 +1,6 @@
 import techs from "./Techs";
 import { Row, Carousel, Container, Card, ListGroup, Col } from "react-bootstrap";
+import "../css/Carousel.css";
 
 const TechnologyCarousel = () => {
   return (
