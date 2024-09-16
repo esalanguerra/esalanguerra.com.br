@@ -1,38 +1,12 @@
 "use client";
-import { Container, Row, Col, Card, Carousel, ListGroup } from 'react-bootstrap';
+
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Perfil from './assets/eu.png';
 import ContactSection from './components/ContactSection';
-import techs from './components/Techs';
 import eu from './components/Eu';
-
-const TechnologyCarousel = () => {
-  return (
-    <Carousel indicators={false} controls={true} className="tech-carousel">
-      {techs.map((tech, index) => (
-        <Carousel.Item key={index}>
-          <Container>
-            <h3 className="text-center mb-4">{tech.name}</h3>
-            <Row className="justify-content-center">
-              <Col md={8}>
-                <Card className="mb-3">
-                  <Card.Body>
-                    <ListGroup variant="flush">
-                      {tech.items.map((item, index) => (
-                        <ListGroup.Item key={index}>{item}</ListGroup.Item>
-                      ))}
-                    </ListGroup>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </Carousel.Item>
-      ))}
-    </Carousel>
-  );
-}
+import TechnologyCarousel from './components/Carousel';
 
 export default function Home() {
   return (
