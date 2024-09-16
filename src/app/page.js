@@ -5,55 +5,13 @@ import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Perfil from './assets/eu.png'; // Certifique-se de que o caminho para a imagem está correto
 import ContactSection from './components/ContactSection';
+import techs from './components/Techs';
 
 const eu = {
   nome: 'Alan Guerra',
   title: 'Engenheiro de Software',
   description: 'Com uma carreira em desenvolvimento de software iniciada em 2017, tenho ampla experiência em projetos web de grande escala que impactam milhões de usuários, utilizando tecnologias como .NET, JavaScript e TypeScript. Minha trajetória inclui contribuições significativas em projetos internacionais como voluntário, envolvendo o desenvolvimento de aplicações para o setor aeroportuário em Argentina, Moçambique e Estados Unidos.',
 }
-
-const techs = [
-  {
-    name: "Linguagens de Programação",
-    items: ["C#", "TypeScript", "JavaScript"]
-  },
-  {
-    name: "Frontend",
-    items: ["ReactJS", "Angular", "Bootstrap", "Next.js", "Redux", "ViteJS"]
-  },
-  {
-    name: "Backend",
-    items: [".NET Framework", "ASP.NET", "Blazor", "ASP.NET MVC", "Nest.js", "Node.js", "Express", "Fastify"]
-  },
-  {
-    name: "Computação em Nuvem",
-    items: ["Firebase", "Supabase", "Microsoft Azure", "Vercel"]
-  },
-  {
-    name: "Arquitetura de Software",
-    items: ["Circuit Breaker", "Backend for Frontend (BFF)", "DDD", "Clean Architecture"]
-  },
-  {
-    name: "DevOps",
-    items: ["Docker", "Kubernetes", "Terraform", "Jenkins", "Azure DevOps", "AWS"]
-  },
-  {
-    name: "Banco de Dados",
-    items: ["PostgreSQL", "SQL Server", "MongoDB", "SQLite"]
-  },
-  {
-    name: "Ferramentas de Monitoramento",
-    items: ["Grafana", "Prometheus"]
-  },
-  {
-    name: "Versionamento e CI/CD",
-    items: ["Git", "GitLab", "GitHub", "Git Flow", "Linux", "Jenkins"]
-  },
-  {
-    name: "Gateway de Pagamentos",
-    items: ["Stripe", "PayPal", "Mercado Pago"]
-  }
-]
 
 const TechnologyCarousel = () => {
   return (
