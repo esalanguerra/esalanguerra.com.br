@@ -1,7 +1,6 @@
 "use client";
 
 import { Container } from 'react-bootstrap';
-import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Perfil from './assets/eu.png';
 import ContactSection from './components/ContactSection';
@@ -12,7 +11,6 @@ import ProjectSection from './components/ProjectSection';
 export default function Home() {
   return (
     <>
-      <Navbar />
       <section id="home" className="text-center py-5">
         <Container>
           <div className="d-flex justify-content-center mb-4">

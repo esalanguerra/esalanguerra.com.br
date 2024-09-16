@@ -1,11 +1,9 @@
-"use client"
-
-import NavBar from "../components/Navbar"
+"use client";
 
 export default function Projects () {
   return (
     <>
-      <NavBar />
+      
     </>
   )
 }
