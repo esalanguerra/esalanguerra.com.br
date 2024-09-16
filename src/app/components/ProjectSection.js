@@ -1,4 +1,4 @@
-import projects from "./Projects";
+import projects from "./leads/Projects";
 import { Row, Col, Card, Container } from "react-bootstrap";
 
 const ProjectSection = () => {
