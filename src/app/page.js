@@ -1,18 +1,18 @@
 "use client";
 
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Perfil from './assets/eu.png';
 import ContactSection from './components/ContactSection';
 import eu from './components/Eu';
 import TechnologyCarousel from './components/Carousel';
+import ProjectSection from './components/ProjectSection';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-
       <section id="home" className="text-center py-5">
         <Container>
           <div className="d-flex justify-content-center mb-4">
@@ -44,37 +44,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section id="projects" className="py-5">
-        <Container>
-          <h2>Projetos</h2>
-          <Row>
-            <Col md={4}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Projeto 1</Card.Title>
-                  <Card.Text>Descrição do Projeto 1.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Projeto 2</Card.Title>
-                  <Card.Text>Descrição do Projeto 2.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Projeto 3</Card.Title>
-                  <Card.Text>Descrição do Projeto 3.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <ProjectSection />
 
       <ContactSection />
 
