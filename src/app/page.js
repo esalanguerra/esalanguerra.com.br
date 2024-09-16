@@ -1,6 +1,6 @@
 // app/page.js
 "use client";
-import { Container, Navbar, Nav, NavDropdown, Row, Col, Card } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Row, Col, Card, Carousel } from 'react-bootstrap';
 import Image from 'next/image';
 import Perfil from './assets/eu.png'; // Certifique-se de que o caminho para a imagem está correto
 
@@ -16,7 +16,47 @@ const menu = [
   { id: 'consulting', name: 'Consultoria' },
   { id: 'projects', name: 'Projetos' },
   { id: 'contact', name: 'Contato' },
+  { id: 'techs', name: 'Tecnologias' },
 ]
+
+const techs = {
+  framework: ["React", "Angular", "Nest.js", "Express", "Fastify", "ASP.NET Core", "Flask"],
+  lang: ["JavaScript", "TypeScript", "Python", "C#", "SQL"],
+  db: ["MongoDB", "PostgreSQL", "SQL Server"],
+  tool: ["Git", "Docker", "Postman"],
+  devops: ["Terraform", "Ansible", "Kong", "Kong Gateway", "Kubernetes", "Jenkins", "Grafana", "Prometheus"],
+  cloud: ["AWS", "Azure", "Vercel", "Hostinger", "Render", "Heroku"],
+  aws: ["EC2", "S3", "RDS", "Lambda", "API Gateway", "Amplify", "Cognito"],
+  ui: ["Tailwindcss", "Bootstrap", "material-ui", "Native Base"],
+  architecture: ["Microservices", "Serverless", "RESTful", "GraphQL"],
+  testing: ["Jest", "Supertest", "Selenium", "Auto Cannon", "Cypress"],
+  other: ["HTML", "CSS", "SASS"],
+}
+
+const TechnologyCarousel = () => {
+  return (
+    <Carousel indicators={false} controls={true} className="tech-carousel">
+      {Object.entries(techs).map(([category, items]) => (
+        <Carousel.Item key={category}>
+          <Container>
+            <h3 className="text-center mb-4">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+            <Row className="justify-content-center">
+              <Col md={8}>
+                <Card className="mb-3">
+                  <Card.Body>
+                    <Card.Text>
+                      {items.join(', ')}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  );
+}
 
 export default function Home() {
   return (
@@ -111,6 +151,13 @@ export default function Home() {
           <h2>Contato</h2>
           <p>Entre em contato conosco através do formulário abaixo ou envie um e-mail para contato@exemplo.com.</p>
           {/* Adicione um formulário de contato aqui */}
+        </Container>
+      </section>
+
+      <section id="techs" className="py-5">
+        <Container>
+          <h2>Tecnologias</h2>
+          <TechnologyCarousel />
         </Container>
       </section>
     </>
