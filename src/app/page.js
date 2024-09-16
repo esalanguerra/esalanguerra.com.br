@@ -1,9 +1,8 @@
-// app/page.js
 "use client";
 import { Container, Row, Col, Card, Carousel, ListGroup } from 'react-bootstrap';
 import Navbar from './components/Navbar';
 import Image from 'next/image';
-import Perfil from './assets/eu.png'; // Certifique-se de que o caminho para a imagem está correto
+import Perfil from './assets/eu.png';
 import ContactSection from './components/ContactSection';
 import techs from './components/Techs';
 import eu from './components/Eu';
