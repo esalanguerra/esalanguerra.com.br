@@ -7,7 +7,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* styles/globals.css */
 .tech-carousel .carousel-control-prev,
 .tech-carousel .carousel-control-next {
   width: 5%;
@@ -30,4 +29,3 @@ h1 {
 .tech-carousel .carousel-indicators .active {
   background-color: #000;
 }
-

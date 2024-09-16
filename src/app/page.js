@@ -1,8 +1,9 @@
 // app/page.js
 "use client";
-import { Container, Navbar, Nav, NavDropdown, Row, Col, Card, Carousel } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Row, Col, Card, Carousel, ListGroup } from 'react-bootstrap';
 import Image from 'next/image';
 import Perfil from './assets/eu.png'; // Certifique-se de que o caminho para a imagem está correto
+import ContactSection from './components/ContactSection';
 
 const eu = {
   nome: 'Alan Guerra',
@@ -19,34 +20,65 @@ const menu = [
   { id: 'techs', name: 'Tecnologias' },
 ]
 
-const techs = {
-  framework: ["React", "Angular", "Nest.js", "Express", "Fastify", "ASP.NET Core", "Flask"],
-  lang: ["JavaScript", "TypeScript", "Python", "C#", "SQL"],
-  db: ["MongoDB", "PostgreSQL", "SQL Server"],
-  tool: ["Git", "Docker", "Postman"],
-  devops: ["Terraform", "Ansible", "Kong", "Kong Gateway", "Kubernetes", "Jenkins", "Grafana", "Prometheus"],
-  cloud: ["AWS", "Azure", "Vercel", "Hostinger", "Render", "Heroku"],
-  aws: ["EC2", "S3", "RDS", "Lambda", "API Gateway", "Amplify", "Cognito"],
-  ui: ["Tailwindcss", "Bootstrap", "material-ui", "Native Base"],
-  architecture: ["Microservices", "Serverless", "RESTful", "GraphQL"],
-  testing: ["Jest", "Supertest", "Selenium", "Auto Cannon", "Cypress"],
-  other: ["HTML", "CSS", "SASS"],
-}
+const techs = [
+  {
+    name: "Linguagens de Programação",
+    items: ["C#", "TypeScript", "JavaScript"]
+  },
+  {
+    name: "Frontend",
+    items: ["ReactJS", "Angular", "Bootstrap", "Next.js", "Redux", "ViteJS"]
+  },
+  {
+    name: "Backend",
+    items: [".NET Framework", "ASP.NET", "Blazor", "ASP.NET MVC", "Nest.js", "Node.js", "Express", "Fastify"]
+  },
+  {
+    name: "Computação em Nuvem",
+    items: ["Firebase", "Supabase", "Microsoft Azure", "Vercel"]
+  },
+  {
+    name: "Arquitetura de Software",
+    items: ["Circuit Breaker", "Backend for Frontend (BFF)", "DDD", "Clean Architecture"]
+  },
+  {
+    name: "DevOps",
+    items: ["Docker", "Kubernetes", "Terraform", "Jenkins", "Azure DevOps", "AWS"]
+  },
+  {
+    name: "Banco de Dados",
+    items: ["PostgreSQL", "SQL Server", "MongoDB", "SQLite"]
+  },
+  {
+    name: "Ferramentas de Monitoramento",
+    items: ["Grafana", "Prometheus"]
+  },
+  {
+    name: "Versionamento e CI/CD",
+    items: ["Git", "GitLab", "GitHub", "Git Flow", "Linux", "Jenkins"]
+  },
+  {
+    name: "Gateway de Pagamentos",
+    items: ["Stripe", "PayPal", "Mercado Pago"]
+  }
+]
 
 const TechnologyCarousel = () => {
   return (
     <Carousel indicators={false} controls={true} className="tech-carousel">
-      {Object.entries(techs).map(([category, items]) => (
-        <Carousel.Item key={category}>
+      {techs.map((tech, index) => (
+        <Carousel.Item key={index}>
           <Container>
-            <h3 className="text-center mb-4">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+            <h3 className="text-center mb-4">{tech.name}</h3>
             <Row className="justify-content-center">
               <Col md={8}>
                 <Card className="mb-3">
                   <Card.Body>
-                    <Card.Text>
-                      {items.join(', ')}
-                    </Card.Text>
+                    <ListGroup variant="flush">
+                      {tech.items.map((item, index) => (
+                        <ListGroup.Item key={index}>{item}</ListGroup.Item>
+                      ))}
+                    </ListGroup>
                   </Card.Body>
                 </Card>
               </Col>
@@ -146,13 +178,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section id="contact" className="bg-light py-5">
-        <Container>
-          <h2>Contato</h2>
-          <p>Entre em contato conosco através do formulário abaixo ou envie um e-mail para contato@exemplo.com.</p>
-          {/* Adicione um formulário de contato aqui */}
-        </Container>
-      </section>
+      <ContactSection />
 
       <section id="techs" className="py-5">
         <Container>
