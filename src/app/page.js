@@ -1,6 +1,7 @@
 // app/page.js
 "use client";
-import { Container, Navbar, Nav, NavDropdown, Row, Col, Card, Carousel, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, Card, Carousel, ListGroup } from 'react-bootstrap';
+import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Perfil from './assets/eu.png'; // Certifique-se de que o caminho para a imagem está correto
 import ContactSection from './components/ContactSection';
@@ -10,15 +11,6 @@ const eu = {
   title: 'Engenheiro de Software',
   description: 'Com uma carreira em desenvolvimento de software iniciada em 2017, tenho ampla experiência em projetos web de grande escala que impactam milhões de usuários, utilizando tecnologias como .NET, JavaScript e TypeScript. Minha trajetória inclui contribuições significativas em projetos internacionais como voluntário, envolvendo o desenvolvimento de aplicações para o setor aeroportuário em Argentina, Moçambique e Estados Unidos.',
 }
-
-const menu = [
-  { id: 'home', name: 'Início' },
-  { id: 'development', name: 'Desenvolvimento' },
-  { id: 'consulting', name: 'Consultoria' },
-  { id: 'projects', name: 'Projetos' },
-  { id: 'contact', name: 'Contato' },
-  { id: 'techs', name: 'Tecnologias' },
-]
 
 const techs = [
   {
@@ -93,27 +85,7 @@ const TechnologyCarousel = () => {
 export default function Home() {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">Alan Guerra</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              {menu.map((item, index) =>
-                item.name === 'Serviços' ? (
-                  <NavDropdown key={index} title={item.name} id="basic-nav-dropdown">
-                    {menu.filter(subItem => subItem.id !== 'home' && subItem.id !== 'projects' && subItem.id !== 'contact').map((subItem, subIndex) => (
-                      <NavDropdown.Item key={subIndex} href={`#${subItem.id}`}>{subItem.name}</NavDropdown.Item>
-                    ))}
-                  </NavDropdown>
-                ) : (
-                  <Nav.Link key={index} href={`#${item.id}`}>{item.name}</Nav.Link>
-                )
-              )}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Navbar />
 
       <section id="home" className="text-center py-5">
         <Container>
