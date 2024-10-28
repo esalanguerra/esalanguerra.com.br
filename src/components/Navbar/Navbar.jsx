@@ -27,16 +27,16 @@ export const Navbar = () => {
           onClick={() => setMenuOpen(false)}
         >
           <li>
-            <a href="#about">About</a>
+            <a href="#about">Sobre</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience">Experiências</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Projetos</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contatos</a>
           </li>
         </ul>
       </div>
