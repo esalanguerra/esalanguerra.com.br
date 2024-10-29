@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Plataforma de Ecommerce",
+    "imageSrc": "projects/1.png",
+    "description": "Uma plataforma de e-commerce que usa .NET para APIs robustas e React para uma interface de usuário interativa. Utilize Redux para gerenciamento de estado e Next.js para renderização do lado do servidor.",
+    "skills": [
+      ".NET",
+      "React.js",
+      "Redux",
+      "Next.js",
+      "Stripe",
+      "PostgreSQL"
+    ],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Aplicativo de Mensagens em Tempo Real",
+    "imageSrc": "projects/2.png",
+    "description": "Um aplicativo web de mensagens que utiliza Firebase para autenticação com google e banco de dados em tempo real, com React para o frontend e firebase realtime para mensagens.",
+    "skills": [
+      "Firebase",
+      "React.js",
+      "Node.js",
+      "Vite.js",
+      "TypeScript",
+      "Bootstrap",
+      "Google Auth"
+    ],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

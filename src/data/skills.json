@@ -1,0 +1,70 @@
+[
+  {
+    "title": "HTML 5",
+    "imageSrc": "skills/html.png"
+  },
+  {
+    "title": "React",
+    "imageSrc": "skills/react.png"
+  },
+  {
+    "title": "Angular",
+    "imageSrc": "skills/angular.png"
+  },
+  {
+    "title": "Next",
+    "imageSrc": "skills/next.png"
+  },
+  {
+    "title": "Node",
+    "imageSrc": "skills/node.png"
+  },
+  {
+    "title": "TypeScript",
+    "imageSrc": "skills/typescript.png"
+  },
+  {
+    "title": "Jest",
+    "imageSrc": "skills/jest.png"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "skills/javascript.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "MongoDB",
+    "imageSrc": "skills/mongodb.png"
+  },
+  {
+    "title": "Postgres",
+    "imageSrc": "skills/postgresql.png"
+  },
+  {
+    "title": "C#",
+    "imageSrc": "skills/csharp.png"
+  },
+  {
+    "title": "Firebase",
+    "imageSrc": "skills/firebase.png"
+  },
+  {
+    "title": "Docker",
+    "imageSrc": "skills/docker.png"
+  },
+  {
+    "title": "GraphQL",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Grafana",
+    "imageSrc": "skills/grafana.png"
+  },
+  {
+    "title": "Prometheus",
+    "imageSrc": "skills/prometheus.png"
+  }
+]
