@@ -1,2 +1,2 @@
-*.html export-ignore
-*.css export-ignore
+*.html linguist-documentation
+*.css linguist-documentation
